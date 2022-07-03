@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+<h2>Info</h2>
+<span class="text-success">
+    @TempData["msg"]
+</span>
+<table class="table table-condensed">
+    <tr>
+        <td>Id:</td>
+        <td>@TempData["Id"]</td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>@TempData["Name"]</td>
+    </tr>
+    <tr>
+        <td>Quantity:</td>
+        <td>@TempData["Quantity"]</td>
+    </tr>
+</table>
+

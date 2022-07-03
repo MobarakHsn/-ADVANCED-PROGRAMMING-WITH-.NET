@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>
+                Id:
+            </td>
+            <td>
+                <input type="text" name="Id" class="form-control" value="@(Model!=null? Model.Id:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Id",new {@class="text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" name="Name" class="form-control" value="@(Model!=null? Model.Name:"")"/>
+            </td>
+            <td>
+                @Html.ValidationMessage("Name", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Quantity:
+            </td>
+            <td>
+                <input type="text" name="Quantity" class="form-control" value="@(Model!=null? Model.Quantity:0)" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Quantity", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>
+

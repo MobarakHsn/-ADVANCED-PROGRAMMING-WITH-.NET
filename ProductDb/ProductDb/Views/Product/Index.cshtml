@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<td><a class="btn btn-info" href="/Product/Create">Add Product</a></td>
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Condition</th>
+        <th>Desciption</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+            <td>@p.Qty</td>
+            <td>@p.Condition</td>
+            <td>@p.Description</td>
+            <td><a class="btn btn-success" href="/Product/Edit/@p.Id">Edit</a></td>
+            <td><a class="btn btn-danger" href="/Product/Delete/@p.Id">Delete</a></td>
+        </tr>
+    }
+</table>
+<form action="" method="post">
+    <input type="submit" value="All Products" name="all" class="btn btn-default" />
+    <input type="submit" value="Good Products" name="good" class="btn btn-primary" />
+    <input type="submit" value="Medium Products" name="medium" class="btn btn-warning" />
+    <input type="submit" value="Bad Products" name="bad" class="btn btn-danger" />
+</form>
+<span class="text-info">
+    @TempData["msg"]
+</span>
+
+

@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<td><a class="btn btn-primary" href="/Product/Index">Index</a></td>
+<form action="" method="post">
+    <table class="table table-responsive">
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" name="Name" class="form-control" value="@(Model!=null? Model.Name:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Name", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price:
+            </td>
+            <td>
+                <input type="text" name="Price" class="form-control" value="@(Model!=null? Model.Price:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Price", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Quantity:
+            </td>
+            <td>
+                <input type="text" name="Qty" class="form-control" value="@(Model!=null? Model.Qty:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Qty", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Condition:
+            </td>
+            <td>
+                <input type="text" name="Condition" class="form-control" value="@(Model!=null? Model.Condition:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Condition", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Descrription:
+            </td>
+            <td>
+                <input type="text" name="Description" class="form-control" value="@(Model!=null? Model.Description:"")" />
+            </td>
+            <td>
+                @Html.ValidationMessage("Description", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>
+
